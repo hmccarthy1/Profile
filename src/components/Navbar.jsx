@@ -20,9 +20,8 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className="text-white text-[18px] font-bold cursor-pointer">
-            Hunter McCarthy{" "}
-            <span className="sm:block hidden"> | Power Platform Developer</span>
+          <p className="text-white text-[18px] font-bold cursor-pointer flex">
+            Hunter McCarthy &nbsp; <span className="sm:block hidden"> | Power Platform Developer</span>
           </p>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
@@ -58,9 +57,12 @@ const Navbar = () => {
             key={nav.id}
               className={`${
                 active === nav.title ? 'text-white' : 'text-secondary'
-              } hover:text-white text-[18px] font-medium cursor-pointer
+              } hover:text-white text-[16px] font-medium cursor-pointer font-poppins
               `}
-              onClick={() => {setActive(nav.title); console.log(nav.title)}}>
+              onClick={() => {
+                setActive(nav.title); 
+                setToggle(!toggle);                
+                }}>
 
 
 
